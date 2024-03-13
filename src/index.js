@@ -3,8 +3,10 @@ import 'dotenv/config';
 import serverless from 'serverless-http';
 import express from "express";
 
-const app = express();
+import connectMongo from './config/index.js'
 
+const app = express();
+connectMongo()
 app.get("/", (req, res, next) => {
   return res.status(200).json({
     message: "Hello from root!",
@@ -19,4 +21,4 @@ if (process.env.NODE_ENV === "local") {
 }
 
 export const handler = serverless(app);
-// https://hr93rg8j9h.execute-api.us-east-1.amazonaws.com 
+// https://hr93rg8j9h.execute-api.us-east-1.amazonaws.com   
