@@ -10,6 +10,6 @@
     "swagger-ui-express": "^5.0.0"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start:dev": "nodemon index.js"
   }
 }
